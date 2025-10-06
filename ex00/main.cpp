@@ -5,7 +5,8 @@
 #include "easyfind.hpp"
 
 int main() {
-    // Test with vector
+    std::cout << "\n=== Testing std::vector ===" << std::endl;
+
     std::vector<int> v;
     v.push_back(1);
     v.push_back(2);
@@ -14,19 +15,19 @@ int main() {
     try {
         std::vector<int>::iterator it = easyfind(v, 2);
         std::cout << "Found: " << *it << std::endl;
-    } catch (std::exception& e) {
-        std::cout << "Not found" << std::endl;
+    } catch (std::exception& ) {
+        std::cout << "EXCEPTION: Not found" << std::endl;
     }
     
-    // Test with list
+    std::cout << "\n=== Testing std::list ===" << std::endl;
     std::list<int> lst;
     lst.push_back(10);
     lst.push_back(20);
     
     try {
-        easyfind(lst, 99);  // Will throw
-    } catch (std::exception& e) {
-        std::cout << "Not found" << std::endl;
+        easyfind(lst, 99);
+    } catch (std::exception& ) {
+        std::cout << "EXCEPTION: Not found" << std::endl;
     }
     
     return 0;

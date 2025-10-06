@@ -22,6 +22,7 @@ class Span{
         template<typename Iterator>
         void addRange(Iterator begin, Iterator end){
             if (_Numbers.size() + std::distance(begin, end) > N)
+                throw std::exception();
             _Numbers.insert(_Numbers.end() ,begin,end);
         }
 };

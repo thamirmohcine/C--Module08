@@ -1,7 +1,5 @@
 #include "MutantStack.hpp"
-#include <iostream>
 #include <list>
-#include <stack>
 #include <vector>
 
 int main()
@@ -11,9 +9,9 @@ int main()
         MutantStack<int> mstack;
         mstack.push(5);
         mstack.push(17);
-        std::cout << mstack.top() << std::endl;
+        std::cout << "element in the back: " << mstack.top() << std::endl;
         mstack.pop();
-        std::cout << mstack.size() << std::endl;
+        std::cout << "size after pop(): "<< mstack.size() << std::endl;
         mstack.push(3);
         mstack.push(5);
         mstack.push(737);
@@ -33,12 +31,12 @@ int main()
     
     std::cout << "\n=== Testing std::list ===" << std::endl;
     {
-        std::list<int> mstack;  // Same variable name for clarity
-        mstack.push_back(5);    // push() → push_back()
+        std::list<int> mstack;
+        mstack.push_back(5); 
         mstack.push_back(17);
-        std::cout << mstack.back() << std::endl;  // top() → back()
-        mstack.pop_back();      // pop() → pop_back()
-        std::cout << mstack.size() << std::endl;
+        std::cout << "element in the back: " << mstack.back() << std::endl;
+        mstack.pop_back();   
+        std::cout << "size after pop_back(): "<< mstack.size() << std::endl;
         mstack.push_back(3);
         mstack.push_back(5);
         mstack.push_back(737);
@@ -57,12 +55,12 @@ int main()
     }
     std::cout << "\n=== Testing std::vector ===" << std::endl;
     {
-        std::vector<int> mstack;  // Same variable name for clarity
-        mstack.push_back(5);    // push() → push_back()
+        std::vector<int> mstack;  
+        mstack.push_back(5);   
         mstack.push_back(17);
-        std::cout << mstack.back() << std::endl;  // top() → back()
-        mstack.pop_back();      // pop() → pop_back()
-        std::cout << mstack.size() << std::endl;
+        std::cout << "element in the back: " << mstack.back() << std::endl; 
+        mstack.pop_back();  
+        std::cout << "size after pop_back(): " << mstack.size() << std::endl;
         mstack.push_back(3);
         mstack.push_back(5);
         mstack.push_back(737);
